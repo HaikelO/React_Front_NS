@@ -1,0 +1,10 @@
+.cr_products_list_item {
+    border: 1px solid black;
+    cursor: pointer;    
+    display: inline-block;    
+    margin-bottom: 1%;
+    margin-left: 1%;
+    padding-bottom: 10px;
+    padding-top: 10px;    
+    width: 19%;
+}
