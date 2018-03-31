@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import { CATEGORIE_SELECTED } from './../actions/index';
 
 export default function (state = null, action) {

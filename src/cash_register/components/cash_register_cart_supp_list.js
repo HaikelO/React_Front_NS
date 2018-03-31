@@ -11,16 +11,14 @@ class CashRegisterCartSuppList extends Component {
         const { cart, indexProduit } = this.props;
         let list = {};
         let array = [];
-        let i = 0;
+        
         if (cart[indexProduit].supp !== null) {
             list = cart[indexProduit].supp;
-        }
+        }        
         
-        /* return list.map((item, index) => this.renderListItem(item, index)) */
         for (let o in list) {
-            i++;
-            let item = {};
-            console.log(cart[indexProduit].supp[o]);
+            
+            let item = {};            
             item.title = o;
             item.value = cart[indexProduit].supp[o];
             item.price = 0;

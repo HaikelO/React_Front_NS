@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import CashRegisterModalCategoriesListItem from './cash_register_modal_categories_list_item'
-import Datastore from 'nedb';
-const dbMCategories = new Datastore({ filename: 'data/dataMCategories.json', autoload: true });
 
 class CashRegisterModalCategoriesList extends Component {
     renderListItem(item, index) {

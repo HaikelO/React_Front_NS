@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import update from 'react-addons-update';
 import { CART_ADD_PRODUCT, CART_DROP_PRODUCT, CART_ADD_SUPP, CART_DEL_SUPP } from './../actions';
 

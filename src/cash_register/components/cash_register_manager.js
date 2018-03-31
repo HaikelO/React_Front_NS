@@ -44,7 +44,7 @@ class CashResgisterManager extends Component {
     }
 }
 
-function mapToDispatch(dispatch) {
+function mapDispatchToProps(dispatch) {
     return bindActionCreators({ addProductToDB, fetchProductFromDB }, dispatch);
 }
-export default connect(null, mapToDispatch)(CashResgisterManager);
+export default connect(null, mapDispatchToProps)(CashResgisterManager);

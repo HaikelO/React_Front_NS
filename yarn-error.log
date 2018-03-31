@@ -1,0 +1,85 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\Serenity\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js buildall
+
+PATH: 
+  C:\Users\Serenity\AppData\Local\Programs\Business Objects\Common\3.5\bin\NOTES\;C:\Users\Serenity\AppData\Local\Programs\Business Objects\Common\3.5\bin\NOTES\DATA\;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\OpenCL SDK\1.5\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\1.5\bin\x64;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\Broadcom\Broadcom 802.11\Driver;C:\Program Files (x86)\Heroku\bin;C:\Program Files (x86)\git\cmd;C:\Sun\SDK\jdk\bin;C:\Program Files (x86)\AMD\ATI.ACE\Core-Static;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Users\Serenity\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files (x86)\Skype\Phone\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Users\Serenity\AppData\Local\atom\bin;C:\Users\Serenity\AppData\Roaming\npm;C:\Development\android-sdk\platform-tools;C:\Development\android-sdk\tools;C:\Users\Serenity\AppData\Local\Android\Sdk;C:\Program Files\Microsoft VS Code\bin
+
+Yarn version: 
+  1.5.1
+
+Node version: 
+  7.2.0
+
+Platform: 
+  win32 x64
+
+npm manifest: 
+  {
+    "name": "front",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+      "axios": "^0.18.0",
+      "lodash": "^4.17.5",
+      "nedb": "^1.8.0",
+      "react": "^16.2.0",
+      "react-addons-update": "^15.6.2",
+      "react-dom": "^16.2.0",
+      "react-modal": "^3.3.2",
+      "react-redux": "^5.0.7",
+      "react-router-dom": "^4.2.2",
+      "react-scripts": "1.1.1",
+      "react-tabs": "^2.2.1",
+      "redux": "^3.7.2",
+      "redux-promise": "^0.5.3"
+    },
+    "homepage": "./",
+    "main": "src/start.js",
+    "build": {
+      "extends": null,
+      "appId": "com.electron.electron-with-create-react-app",
+      "directories": {
+        "buildResources": "public"
+      }
+    },
+    "scripts": {
+      "start": "react-scripts start",
+      "build": "react-scripts build",
+      "test": "react-scripts test --env=jsdom",
+      "eject": "react-scripts eject",
+      "electron": "electron .",
+      "electron-start": "node src/electron-wait-react",
+      "pack": "build --dir",
+      "dist": "npm run build && build",
+      "postinstall": "install-app-deps",
+      "builder": "electron-builder",
+      "buildall": "electron-builder -mwl",
+      "buildmac": "electron-builder --mac"
+    },
+    "devDependencies": {
+      "electron": "^1.8.3",
+      "electron-builder": "^19.24.1"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: Command failed.
+  Exit code: 1
+  Command: C:\Windows\system32\cmd.exe
+  Arguments: /d /s /c electron-builder -mwl
+  Directory: C:\Users\Serenity\Desktop\Bureau\Nutshell\public\React_Front_NS
+  Output:
+  
+      at ProcessTermError.MessageError (C:\Users\Serenity\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:186:110)
+      at new ProcessTermError (C:\Users\Serenity\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:226:113)
+      at ChildProcess.<anonymous> (C:\Users\Serenity\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:30281:17)
+      at emitTwo (events.js:106:13)
+      at ChildProcess.emit (events.js:191:7)
+      at maybeClose (internal/child_process.js:885:16)
+      at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)

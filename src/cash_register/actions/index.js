@@ -12,6 +12,8 @@ export const CART_ADD_SUPP = "cart_add_supp";
 export const CART_DEL_SUPP = "cart_del_supp";
 export const ADD_PRODUCT_DB = "add_product_db";
 export const FETCH_PRODUCT_DB = "fetch_product_db";
+export const OPEN_PAYMENT_MODAL = "open_payment_modal";
+export const CLOSE_PAYMENT_MODAL = "close_payment_modal";
 
 
 export function selectCategorie(categorie) {
@@ -85,5 +87,19 @@ export function fetchProductFromDB (){
     return {
         type : FETCH_PRODUCT_DB,
         payload : request
+    }
+}
+
+export function openPaymentModal(item) {
+    return {
+        type: OPEN_PAYMENT_MODAL,
+        payload: item
+    }
+}
+
+export function closePaymentModal(item) {
+    return {
+        type: CLOSE_PAYMENT_MODAL,
+        payload: item
     }
 }

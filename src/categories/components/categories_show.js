@@ -1,25 +1,23 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import ProductsList from './products_list';
+import CategoriesList from './categories_list';
 import NavigationShow from './../../_components/navigation/navigation_show';
 
-class ProductsShow extends Component {
 
+class CategoriesShow extends Component {
     render() {
-
-        const list = [{ title: "toto" }, { title: "tata" }, { title: "tete" }];
         return (
             <div className="row">
                 <div className="col-md-4">
                     <NavigationShow />
                 </div>
                 <div className="col-md-8">
-                    <Link to="/product/add"><button className="btn">Ajouter</button> </Link>
-                    <ProductsList list={list} />
-                </div>                
+                    <Link to="/categorie/add"><button className="btn">Ajouter</button></Link>
+                    <CategoriesList />
+                </div>
             </div>
         );
     }
 }
 
-export default ProductsShow;
+export default CategoriesShow;

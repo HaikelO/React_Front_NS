@@ -2,16 +2,16 @@ import React, { Component } from 'react';
 import Modal from 'react-modal';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { closeModal } from './../actions/index';
-import CashRegisterModalList from './cash_register_modal_list';
-import CashRegisterModalCategoriesShow from './cash_register_modal_categories_show';
+import { closePaymentModal } from './../actions/index';
+import CashRegisterPaymentList from './cash_register_payment_list';
+import CashRegisterPaymentKeyboard from './cash_register_payment_keyboard'
 import 'react-tabs/style/react-tabs.css';
 
-class CashRegisterModal extends Component {
+class CashRegisterPaymentModal extends Component {
     constructor(props) {
         super(props);
 
-        
+
         this.afterOpenModal = this.afterOpenModal.bind(this);
         this.closeModal = this.closeModal.bind(this);
     }
@@ -19,9 +19,8 @@ class CashRegisterModal extends Component {
         // references are now sync'd and can be accessed.
 
     }
-
     closeModal() {
-        this.props.closeModal();
+        this.props.closePaymentModal();
     }
     render() {
         const customStyles = {
@@ -34,21 +33,18 @@ class CashRegisterModal extends Component {
                 transform: 'translate(-50%, -50%)'
             }
         };
-        
+        const { payment } = this.props;
+
         return (
             <Modal
-                isOpen={this.props.modal.isOpen}
+                isOpen={payment.modalIsOpen}
                 onAfterOpen={this.afterOpenModal}
                 onRequestClose={this.closeModal}
                 style={customStyles}
                 contentLabel="Example Modal"
             >
-                <div>
-                    <CashRegisterModalCategoriesShow />
-                </div>
-                <div>
-                    <CashRegisterModalList index={this.props.modal.index} />
-                </div>
+                <CashRegisterPaymentKeyboard />
+                <CashRegisterPaymentList />
                 <button onClick={this.closeModal}>close</button>
             </Modal>
         );
@@ -56,13 +52,13 @@ class CashRegisterModal extends Component {
     }
 }
 function mapDispatchToProps(dispatch) {
-    return bindActionCreators({ closeModal: closeModal }, dispatch);
+    return bindActionCreators({ closePaymentModal: closePaymentModal }, dispatch);
 }
 
 function mapStateToProps(state) {
     return {
-        modal: state.modal
+        payment: state.payment
     }
 }
 Modal.setAppElement('#root');
-export default connect(mapStateToProps, mapDispatchToProps)(CashRegisterModal);
+export default connect(mapStateToProps, mapDispatchToProps)(CashRegisterPaymentModal);

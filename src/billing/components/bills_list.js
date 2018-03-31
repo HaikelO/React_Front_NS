@@ -6,10 +6,7 @@ import { fetchBills } from './../actions/index';
 
 class BillsList extends Component {
 
-    constructor(props) {
-        super(props);
-    }
-    componentDidMount() {
+     componentDidMount() {
 
         this.props.fetchBills();
 
