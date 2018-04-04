@@ -12,7 +12,7 @@ class CategoriesShow extends Component {
                     <NavigationShow />
                 </div>
                 <div className="col-md-8">
-                    <Link to="/categorie/add"><button className="btn">Ajouter</button></Link>
+                    <Link to="/categorie/add"><button className="btn btn-primary">Ajouter</button></Link>
                     <CategoriesList />
                 </div>
             </div>

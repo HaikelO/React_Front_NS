@@ -5,7 +5,9 @@ class ProfilShow extends Component {
     render() {
         return (
             <div className="row">
-                <NavigationShow className="col-md-4" />
+                <div className="col-md-4">
+                    <NavigationShow />
+                </div>
                 <div className="col-md-8">
                     Profil
                 </div>

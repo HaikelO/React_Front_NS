@@ -6,13 +6,16 @@ import CartReducer from './../cash_register/reducers/reducer_cashregister_cart';
 import CartTotalReducer from './../cash_register/reducers/reducer_cashregister_cart_total';
 import ModalReducer from './../cash_register/reducers/reducer_cashregister_modal';
 import PaymentReducer from './../cash_register/reducers/reducer_cashregiter_payment';
+import CategoriesReducer from './../categories/reducers/reducer_categories';
+
 const rootReducer = combineReducers({
     bills: BillsReducer,
     activeCategorie: ActiveCategorieReducer,
     cart: CartReducer,
     total: CartTotalReducer,
     modal: ModalReducer,
-    payment : PaymentReducer
+    payment: PaymentReducer,
+    categories: CategoriesReducer
 });
 
 export default rootReducer;

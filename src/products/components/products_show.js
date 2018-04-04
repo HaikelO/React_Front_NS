@@ -14,7 +14,7 @@ class ProductsShow extends Component {
                     <NavigationShow />
                 </div>
                 <div className="col-md-8">
-                    <Link to="/product/add"><button className="btn">Ajouter</button> </Link>
+                    <Link to="/product/add"><button className="btn btn-primary">Ajouter</button></Link>
                     <ProductsList list={list} />
                 </div>                
             </div>

@@ -5,7 +5,7 @@ class CategorieAdd extends Component {
     render() {
         return (
             <div>
-                <Link to="/categories"><button className="btn">Retour</button></Link>
+                <Link to="/categories"><button className="btn btn-primary">Retour</button></Link>
                 <label id="title">Title:</label>
                 <input type="text" name="title" id="title" />
             </div>

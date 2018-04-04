@@ -48,7 +48,6 @@ class CashRegisterPaymentModal extends Component {
                 <button onClick={this.closeModal}>close</button>
             </Modal>
         );
-
     }
 }
 function mapDispatchToProps(dispatch) {
