@@ -1,9 +1,8 @@
-import _ from 'lodash';
-import { FETCH_PRODUCTS } from './../actions/index'
+import { FETCH_REPAIRS, ADD_REPAIR } from './../actions/index';
 
 export default function (state = [], action) {
     switch (action.type) {
-        case FETCH_PRODUCTS:
+        case FETCH_REPAIRS:            
             return action.payload.data.SUCCESS;
         default:
             return state;

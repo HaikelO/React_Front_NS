@@ -5,7 +5,10 @@ class ProductsListItem extends Component {
     render() {
         const { title } = this.props;
         return (
-            <li>Title :{title}</li>
+            <tr>
+                <td></td>
+                <td>{title}</td>
+            </tr>
         );
     }
 }

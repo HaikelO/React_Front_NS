@@ -1,13 +1,31 @@
 import axios from 'axios';
+import { ROOT_URL } from './../../_params/index';
 
-export const FETCH_PRODUCTS = 'fetch_PRODUCTS';
+export const FETCH_PRODUCTS = 'fetch_products';
+export const ADD_PRODUCT = 'add_product';
+export const FETCH_PRODUCT = 'fetch_product';
 
-const ROOT_URL = "http://localhost:9090/api";
+
 
 export function fetchProducts() {
     const request = axios.get(`${ROOT_URL}/products`);
     return {
         type: FETCH_PRODUCTS,
+        payload: request
+    }
+}
+
+export function addProduct(item, callback) {
+    const request = axios.post(`${ROOT_URL}/product/add`, item).then((res) => { return callback(res) });
+    return {
+        type: ADD_PRODUCT,
+        payload: request
+    }
+}
+export function fetchProduct(id) {
+    const request = axios.get(`${ROOT_URL}/product/detail/${id}`);
+    return {
+        type: FETCH_PRODUCT,
         payload: request
     }
 }

@@ -1,11 +1,25 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { fetchProduct } from './../actions/index';
+import { bindActionCreators } from 'redux';
 
 class ProductDetail extends Component {
+    componentDidMount() {
+        const { id } = this.props.match.params;
+        this.props.fetchProduct(id);
+    }
     render() {
         return (
-            <div>Product Detail!</div>
+            <div>{this.props.product.title}</div>
         );
     }
 }
-
-export default ProductDetail;
+function mapStateToProps(state) {
+    return {
+        product: state.product
+    }
+}
+function mapDispatchToProps(dispatch) {
+    return bindActionCreators({ fetchProduct }, dispatch);
+}
+export default connect(mapStateToProps, mapDispatchToProps)(ProductDetail);
