@@ -9,12 +9,23 @@ class CategoriesList extends Component {
         this.props.fetchCategories();
     }
     renderListItem(item) {
-        return <CategoriesListItem key={item.title} title={item.title} />
+        return <CategoriesListItem key={item.title} item={item} />
     }
     render() {
         return (
             <div>
-                {this.props.categories.map(this.renderListItem)}
+                <table className="table">
+                    <thead>
+                        <tr>
+                            <th className="text-center">#</th>
+                            <th className="text-center">Désignation</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {this.props.categories.map(this.renderListItem)}
+                    </tbody>
+                </table>
             </div>
         );
     }

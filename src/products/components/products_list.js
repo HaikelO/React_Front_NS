@@ -12,7 +12,7 @@ class ProductsList extends Component {
     }
     renderListItem(item) {
 
-        return <ProductsListItem key={item._id} title={item.title} />
+        return <ProductsListItem key={item._id} item={item} />
 
     }
     render() {

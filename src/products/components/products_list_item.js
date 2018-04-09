@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
-
+import { Link } from 'react-router-dom';
 class ProductsListItem extends Component {
 
     render() {
-        const { title } = this.props;
+        const { title, _id } = this.props.item;
+        const url = `/product/detail/${_id}`;
         return (
             <tr>
                 <td></td>
-                <td>{title}</td>
-            </tr>
+                <td><Link to={url}> {title}</Link></td>
+            </tr >
         );
     }
 }

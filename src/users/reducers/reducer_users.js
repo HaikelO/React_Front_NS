@@ -1,8 +1,8 @@
-import { FETCH_CLIENTS } from './../actions/index';
+import { FETCH_USERS } from './../actions/index';
 
 export default function (state = [], action) {
     switch (action.type) {
-        case FETCH_CLIENTS:
+        case FETCH_USERS:
             return action.payload.data.SUCCESS;
         default:
             return state;

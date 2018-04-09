@@ -10,6 +10,8 @@ import BillAdd from './billing/components/bill_add';
 
 import UsersShow from './users/components/users_show';
 import UserAdd from './users/components/user_add';
+import UserDetail from './users/components/user_detail';
+
 import ProfilShow from './_components/profil/profil_show';
 import CashRegisterShow from './cash_register/components/cash_register_show';
 
@@ -19,9 +21,11 @@ import ProductDetail from './products/components/product_detail';
 
 import CategoriesShow from './categories/components/categories_show';
 import CategorieAdd from './categories/components/categorie_add';
+import CategorieDetail from './categories/components/categorie_detail';
 
 import ClientsShow from './clients/components/clients_show';
 import ClientAdd from './clients/components/client_add';
+import ClientDetail from './clients/components/client_detail';
 
 import RepairsShow from './repairs/components/repairs_show';
 import RepairAdd from './repairs/components/repair_add';
@@ -39,18 +43,22 @@ class App extends Component {
             <Route path="/bill/Add" component={BillAdd} />
             <Route path="/bills" component={BillsShow} />
 
-            <Route path="/categorie/add" component={CategorieAdd} />
             <Route path="/categories" component={CategoriesShow} />
+            <Route path="/categorie/add" component={CategorieAdd} />
+            <Route path="/categorie/detail/:id" component={CategorieDetail} />
 
             <Route path="/products" component={ProductsShow} />
             <Route path="/product/add" component={ProductAdd} />
             <Route path="/product/detail/:id" component={ProductDetail} />
 
-            <Route path="/user/add" component={UserAdd} />
             <Route path="/users" component={UsersShow} />
+            <Route path="/user/add" component={UserAdd} />
+            <Route path="/user/detail/:id" component={UserDetail} />
 
-            <Route path="/client/add" component={ClientAdd} />
             <Route path="/clients" component={ClientsShow} />
+            <Route path="/client/add" component={ClientAdd} />
+            <Route path="/client/detail/:id" component={ClientDetail} />
+
             <Route path="/profil" component={ProfilShow} />
 
             <Route path="/repairs" component={RepairsShow} />
