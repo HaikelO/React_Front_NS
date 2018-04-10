@@ -11,12 +11,9 @@ class ProductsList extends Component {
         this.props.fetchProducts();
     }
     renderListItem(item) {
-
         return <ProductsListItem key={item._id} item={item} />
-
     }
     render() {
-
         return (
             <div>
                 <table className="table">
